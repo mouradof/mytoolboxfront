@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toolbox | Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white-100">
+
+    <nav class="bg-white shadow-sm">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="logo.png" alt="Logo">
+                    </div>
+                    <div class="hidden sm:-my-px sm:ml-20 sm:flex sm:space-x-8">
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tools</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Workspaces</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Teams</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <div class="relative w-64">
+                        <input type="text" class="block w-full pl-3 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Search...">
+                    </div>
+                    <img class="h-6 w-6 rounded-full ml-4" src="notif.png" alt="">
+                    <img class="h-6 w-6 rounded-full ml-3" src="param.png" alt="">
+                    <div class="ml-3 relative">
+                        <div>
+                            <button class="bg-white flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <img class="h-8 w-8 rounded-full" src="avatar.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="rfcontainer">
+        <div class="rfcontainer_selected">Recent</div>
+        <div class="rfcontainer_unselected">Feed</div>
+    </div>
+
+    <div class="workspace_container">
+        <div class="title_workspace">
+            Workspaces
+        </div>
+        <div class="cards_workspace">
+            <div class="card_workspace_container">
+                <div class="card_workspace">
+                    DEV
+                </div>
+                <div class="points_card_workspace">
+                    <div>.</div>
+                    <div>.</div>
+                    <div>.</div>
+                </div>
+            </div>
+            <div class="card_workspace_container">
+                <div class="add_card_workspace">
+                    + New Workspace
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="workspace_container">
+        <div class="title_workspace">
+            Tools
+        </div>
+        <div class="cards_workspace">
+            <div class="card_workspace_container">
+                <div class="add_card_workspace">
+                    + New Tool
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="">
+    </footer>
+
+</body>
+</html>
+
+<style>
+    #rfcontainer{
+        background-color: #E4E4E4;
+        width: 12%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 30px 10px 30px;
+        margin: 30px 0 0 70px;
+        border-radius: 10px;
+    }
+
+    .rfcontainer_selected{
+        background-color: white;
+        padding: 5px 20px 5px 20px;
+        border-radius: 10px;
+    }
+
+    .rfcontainer_unselected{
+        padding: 5px 20px 5px 20px;
+        border-radius: 10px;
+        color: #5E5E5E;
+    }
+
+    .workspace_container{
+        width: 95%;
+        height: 300px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .title_workspace{
+        font-size: 24px;
+        margin-left: 30px;
+    }
+
+    .cards_workspace{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .card_workspace{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(117, 117, 117, 0.35) 0px 5px 15px;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #0E0E0E;
+        transition: .5s;
+    }
+
+    .add_card_workspace{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: #8C8C8C;
+        transition: .5s;
+    }
+
+    .add_card_workspace:hover{
+        color: #0E0E0E;
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    .card_workspace:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 50px;
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    .card_workspace_container{
+        height: 80%;
+        width: 17%;
+        margin: 30px;
+        display: flex;
+    }
+
+    .points_card_workspace{
+        margin-left: 20px;
+        font-weight: bolder;
+    }
+    
+    .points_card_workspace div{
+        height: 7px;
+        font-size: 20px;
+    }
+
+    .points_card_workspace:hover{
+        cursor: pointer;
+    }
+
+    .tool_container{
+        width: 100%;
+        height: 300px;
+        margin-top: 30px;
+    }
+    
+</style>
